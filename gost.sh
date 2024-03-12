@@ -106,13 +106,13 @@ function Install_ct() {
     mkdir /etc/gost && wget --no-check-certificate https://gotunnel.oss-cn-shenzhen.aliyuncs.com/config.json && mv config.json /etc/gost && chmod -R 777 /etc/gost
   else
     rm -rf gost-linux-"$bit"-"$ct_new_ver".gz
-    wget --no-check-certificate https://as9929.kevinma-icloud.workers.dev/KANIKIG/Multi-EasyGost/master/gost-linux-amd64-2.11.5.gz
+    wget --no-check-certificate https://gh.cache.cloudns.org/KANIKIG/Multi-EasyGost/master/gost-linux-amd64-2.11.5.gz
     gunzip gost-linux-amd64-2.11.5.gz
     mv gost-linux-amd64-2.11.5 gost
     mv gost /usr/bin/gost
     chmod -R 777 /usr/bin/gost
-    wget --no-check-certificate https://as9929.kevinma-icloud.workers.dev/KANIKIG/Multi-EasyGost/master/gost.service && chmod -R 777 gost.service && mv gost.service /usr/lib/systemd/system
-    mkdir /etc/gost && wget --no-check-certificate https://as9929.kevinma-icloud.workers.dev/KANIKIG/Multi-EasyGost/master/config.json && mv config.json /etc/gost && chmod -R 777 /etc/gost
+    wget --no-check-certificate https://gh.cache.cloudns.org/KANIKIG/Multi-EasyGost/master/gost.service && chmod -R 777 gost.service && mv gost.service /usr/lib/systemd/system
+    mkdir /etc/gost && wget --no-check-certificate https://gh.cache.cloudns.org/KANIKIG/Multi-EasyGost/master/config.json && mv config.json /etc/gost && chmod -R 777 /etc/gost
   fi
 
   systemctl enable gost && systemctl restart gost
